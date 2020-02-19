@@ -12,6 +12,7 @@
   - [4.5. `done` Command](#45-done-command)
   - [4.6. `delete` Command](#46-delete-command)
   - [4.7. `find` Command](#47-find-command)
+  - [4.8. `bye` Command](#48-bye-command)
 
 ## 1. Introduction
 
@@ -25,6 +26,8 @@ This program is really just a Todo list. 🤗
 
 ## 3. Features
 
+Tasks are split into 3 different categories, namely Todos, Events, and Deadlines. Todos only contain a description. Events and Deadlines contain a date in addition to the description to describe when the Event is happening, or when the Deadline should be completed by.
+
 Here is a list of the available commands that this program understands:
 
 1. `todo`
@@ -34,12 +37,13 @@ Here is a list of the available commands that this program understands:
 5. `done`
 6. `delete`
 7. `find`
+8. `bye`
 
 > Note that this program **is case-sensitive** (ie. `done` is interpreted differently to `Done` or `DONE`), and all **commands are lower cased**.
 
 ## 4. Usage
 
-Commands (listed in section 3 above) must always come first for this program to correctly understand the command.
+A command (listed in section 3 above) must be the first word entered into the program for it to correctly understand the command (ie. enter `todo Hello` instead of `Hello todo`). 
 
 The keyword within the angle brackets indicate what you should replace them with. For example, when you see `done <number>`, replace the `<number>` with a suitable number like `done 2`.
 
@@ -122,8 +126,8 @@ The program will confirm the deletion of the task, if it exists.
 
 ### 4.7. `find` Command
 
-|                      Description                       |        Format        |
-| :----------------------------------------------------: | :------------------: |
+|                       Description                       |        Format        |
+| :-----------------------------------------------------: | :------------------: |
 | Searches and lists all tasks similar to `<description>` | `find <description>` |
 
 - `<description>` is case-sensitive
@@ -140,3 +144,13 @@ The program will confirm the deletion of the task, if it exists.
 **Expected Outcome**
 
 The program will reply with the correct tasks, if any.
+
+### 4.8. `bye` Command
+
+|    Description    | Format |
+| :---------------: | :----: |
+| Exits the program | `bye`  |
+
+**Expected Outcome**
+
+The program should exit and the GUI should disappear immediately.
